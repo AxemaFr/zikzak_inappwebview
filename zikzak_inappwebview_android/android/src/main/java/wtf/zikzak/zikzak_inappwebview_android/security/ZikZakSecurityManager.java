@@ -270,10 +270,7 @@ public class ZikZakSecurityManager {
                 updatePolicyForSecurityLevel(policy);
                 
                 try {
-                    // Apply modern security features
-                    if (WebViewFeature.isFeatureSupported(WebViewFeature.SUPPRESS_ERROR_PAGE)) {
 
-                    }
                     
                     // Inject security headers
                     injectSecurityHeaders(webView, policy.securityHeaders);

@@ -403,12 +403,7 @@ public class InAppWebViewClient extends WebViewClient {
     ) {
         final InAppWebView webView = (InAppWebView) view;
 
-        if (
-            !WebViewFeature.isFeatureSupported(
-                WebViewFeature.SUPPRESS_ERROR_PAGE
-            ) &&
-            webView.customSettings.disableDefaultErrorPage
-        ) {
+        if (webView.customSettings.disableDefaultErrorPage) {
             webView.stopLoading();
             webView.loadUrl("about:blank");
         }
